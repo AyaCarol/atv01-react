@@ -3,8 +3,8 @@ import { StyleSheet, Text, View } from "react-native";
 
 export default function App(){
     return(
-        <View>
-            <Text>Home</Text>
+        <View style={[styles.container]}>
+              <Text style={[styles.title]}>Este é o App da nossa equipe :)</Text>
         </View>
     );
 }
@@ -15,5 +15,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    title: {
+        fontSize: 24,
+        marginBottom: 20,
     },
 });
