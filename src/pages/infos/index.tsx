@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   input: {
-    width: "40%",
+    width: "80%",
     borderWidth: 1,
     borderRadius: 5,
     padding: 8, 
@@ -93,6 +93,7 @@ const styles = StyleSheet.create({
     fontSize: 16, 
   },
   resultContainer: {
+    backgroundColor: '#fff',
     marginTop: 20,
     padding: 10,
     borderWidth: 1,

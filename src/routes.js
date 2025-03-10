@@ -66,7 +66,7 @@ export default function routes(){
             />
 
             <Tab.Screen
-                name="Informações de Usuário"
+                name="Info"
                 component={Info}
                 options={{
                     tabBarIcon: ({size, color}) => (
