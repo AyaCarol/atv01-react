@@ -46,7 +46,7 @@ export default function routes(){
             />
 
             <Tab.Screen
-                name="Theme"
+                name="Tema"
                 component={Theme}
                 options={{
                     tabBarIcon: ({size, color}) => (
