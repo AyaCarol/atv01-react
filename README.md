@@ -5,7 +5,6 @@
         <li>Emily Grzgorczyki</li>
         <li>Ricardo Ortiz</li>
     </ul>
-
     <h3>Referencias utilizadas:</h3>
     <ul>
         <li><strong>WithFrame: </strong> <a src="https://www.youtube.com/watch?v=lA_73_-n-V4">a Simple Login Screen in React Native</a></li>
