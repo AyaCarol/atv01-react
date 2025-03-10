@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, ScrollView, StyleSheet } from "react-native";
 
-export default function UserInfoForm() {
+export default function FormularioUsuario() {
   const [formulario, setFormulario] = useState({
     nome: "",
     cpf: "",
@@ -10,13 +10,13 @@ export default function UserInfoForm() {
     endereco: "",
     idade: "",
   });
-  const [dados, setDados] = useState(null);
+  const [dados, setDados] = useState<FormularioUsuario | null>(null);
 
-  const handleChange = (key : string, value : string) => {
+  const mudarValores = (key : string, value : string) => {
     setFormulario({ ...formulario, [key]: value });
   };
 
-  const handleSubmit = () => {
+  const enviarValores = () => {
     const { nome, cpf, email } = formulario;
     if (!nome || !cpf || !email) {
       alert("Os campos Nome, CPF e Email são obrigatórios.");
@@ -32,25 +32,25 @@ export default function UserInfoForm() {
       <Text style={styles.title}>Formulário</Text>
       
       <Text style={styles.label}>Nome *</Text>
-      <TextInput style={styles.input} placeholder="Nome" onChangeText={(text) => handleChange("nome", text)} />
+      <TextInput style={styles.input} placeholder="Nome" onChangeText={(text) => mudarValores("nome", text)} />
       
       <Text style={styles.label}>CPF *</Text>
-      <TextInput style={styles.input} placeholder="CPF" keyboardType="numeric" onChangeText={(text) => handleChange("cpf", text)} />
+      <TextInput style={styles.input} placeholder="CPF" keyboardType="numeric" onChangeText={(text) => mudarValores("cpf", text)} />
       
       <Text style={styles.label}>Email *</Text>
-      <TextInput style={styles.input} placeholder="Email" keyboardType="email-address" onChangeText={(text) => handleChange("email", text)} />
+      <TextInput style={styles.input} placeholder="Email" keyboardType="email-address" onChangeText={(text) => mudarValores("email", text)} />
       
       <Text style={styles.label}>Telefone</Text>
-      <TextInput style={styles.input} placeholder="Telefone" keyboardType="phone-pad" onChangeText={(text) => handleChange("telefone", text)} />
+      <TextInput style={styles.input} placeholder="Telefone" keyboardType="phone-pad" onChangeText={(text) => mudarValores("telefone", text)} />
       
       <Text style={styles.label}>Endereço</Text>
-      <TextInput style={styles.input} placeholder="Endereço" onChangeText={(text) => handleChange("endereco", text)} />
+      <TextInput style={styles.input} placeholder="Endereço" onChangeText={(text) => mudarValores("endereco", text)} />
       
       <Text style={styles.label}>Idade</Text>
-      <TextInput style={styles.input} placeholder="Idade" keyboardType="numeric" onChangeText={(text) => handleChange("idade", text)} />
+      <TextInput style={styles.input} placeholder="Idade" keyboardType="numeric" onChangeText={(text) => mudarValores("idade", text)} />
       
     
-      <Button title="Enviar" onPress={handleSubmit}/>
+      <Button title="Enviar" onPress={enviarValores}/>
       
       {dados && (
         <View style={styles.resultContainer}>
