@@ -6,6 +6,7 @@ import Calculadora from './pages/calculadora';
 import Validador from './pages/validador-idade';
 import Login from './pages/login';
 import Info from './pages/infos';
+import Theme from './pages/dark-mode'
 
 import {Entypo, Feather} from '@expo/vector-icons';
 
@@ -40,6 +41,16 @@ export default function routes(){
                 options={{
                     tabBarIcon: ({size, color}) => (
                         <Feather name="calendar" size={size} color={color}/>
+                    )
+                }}
+            />
+
+            <Tab.Screen
+                name="Theme"
+                component={Theme}
+                options={{
+                    tabBarIcon: ({size, color}) => (
+                        <Feather name="moon" size={size} color={color}/>
                     )
                 }}
             />
